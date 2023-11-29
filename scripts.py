@@ -3,7 +3,7 @@ my_list = [1, 2, 3, 4, 5, 6, 7, 8, 9]
 delete_list = []
 for i in range(len(my_list)-1):
   print(i)
-  if i > 0 and i % 2 == 0:
+  if i > 0 and i % 2 != 0:
         delete_list.append(i)
 for el in delete_list[::-1]:
   my_list.pop(el)
@@ -25,16 +25,18 @@ print(good_list)
 
 
 # находит второй по величине элемент в списке
-my_list = [1, 2, 3, 4, 5, 6, 7, 8, 9]
-begin = max(my_list)
-for i in range(len(my_list)):
-  if len(my_list) == 1:
-    print('Обмаан!!! Тут только одно значение!! Фу так делать...')
-    break
-  my_list.remove(begin)
-  if max(my_list) < begin:
-    print(max(my_list))
-    break
+my_list = [10, 2, 3, 4, 5, 6, 7, 8, 9]
+my_list.sort()
+print(my_list[-2])
+# begin = max(my_list)
+# for i in range(len(my_list)):
+#   if len(my_list) == 1:
+#     print('Обмаан!!! Тут только одно значение!! Фу так делать...')
+#     break
+#   my_list.remove(begin)
+#   if max(my_list) < begin:
+#     print(max(my_list))
+#     break
 
 
 # удаляет из списка все дубликаты
